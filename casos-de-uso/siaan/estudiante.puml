@@ -1,0 +1,18 @@
+@startuml "Casos de Uso SIAAN"
+left to right direction
+actor "Estudiante" as estudiante
+actor "Jefa de Carrera" as jefadecarrera
+rectangle SIAAN {
+  usecase "Tomar materias" as CU1
+  usecase "Tomar materias con solicitud" as CU2
+  usecase "Retirar una materia" as CU3
+  usecase "Cambiar paralelo de una materia" as CU4
+}
+estudiante --> CU1
+estudiante --> CU2
+estudiante --> CU3
+estudiante --> CU4
+CU2 <-- jefadecarrera
+CU3 <-- jefadecarrera
+CU4 <-- jefadecarrera
+@enduml
