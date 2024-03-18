@@ -1,0 +1,24 @@
+@startuml "Casos de Uso Banco"
+left to right direction
+actor "Usuario" as usuario
+actor "Cliente" as cliente
+actor "Empleado Sucursal" as empleadosucursal
+rectangle Banco {
+  usecase "Validar Usuario" as CU1
+  usecase "Retirar Dinero" as CU2
+  usecase "Depositar Dinero" as CU3
+  usecase "Transferir Dinero" as CU4
+  usecase "Consultar Saldo" as CU5
+}
+usuario <|-- cliente
+usuario <|-- empleadosucursal
+usuario --> CU1
+cliente --> CU2
+cliente --> CU3
+cliente --> CU4
+cliente --> CU5
+CU2 <-- empleadosucursal
+CU3 <-- empleadosucursal
+CU4 <-- empleadosucursal 
+CU5 <-- empleadosucursal 
+@enduml
