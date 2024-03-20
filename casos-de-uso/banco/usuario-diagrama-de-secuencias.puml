@@ -1,0 +1,52 @@
+@startuml "Autenticar en cajero"
+actor Cliente
+participant LectorDeTarjeta
+participant Pantalla
+participant Teclado
+control GestorDeClientes
+control Transaccion
+entity UsuarioDelBanco
+
+GestorDeClientes -> LectorDeTarjeta : 1. leerTarjeta
+activate GestorDeClientes
+activate LectorDeTarjeta
+
+Cliente -> LectorDeTarjeta : 2. introducirTarjeta
+activate Cliente
+
+LectorDeTarjeta -> GestorDeClientes : 3. datosTarjeta(tarjeta)
+deactivate LectorDeTarjeta
+
+GestorDeClientes -> Pantalla : 4. visualizar("Ingrese PIN")
+activate Pantalla
+
+Pantalla -> GestorDeClientes : 5. Ok
+
+GestorDeClientes -> Teclado : 6. leerPIN(PIN)
+activate Teclado
+
+Cliente -> Teclado : 7. introducirPIN(PIN)
+
+Teclado -> GestorDeClientes : 8. datosPIN(PIN)
+deactivate Teclado
+
+GestorDeClientes -> Transaccion : 9. autentica(datos, PIN)
+activate Transaccion
+
+Transaccion -> UsuarioDelBanco : 10. valida(datos, PIN)
+activate UsuarioDelBanco
+
+UsuarioDelBanco -> Transaccion : 11. ok
+deactivate UsuarioDelBanco
+
+Transaccion -> Transaccion : 12. almacenaDatos
+
+Transaccion -> GestorDeClientes : 13. visualiza(opciones)
+deactivate Transaccion
+
+GestorDeClientes -> Pantalla : 14. visualizar(opciones)
+deactivate GestorDeClientes
+deactivate Pantalla
+deactivate Cliente
+
+@enduml
