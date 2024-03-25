@@ -1,0 +1,36 @@
+@startuml "Diagrama de clases Banco"
+skinparam classAttributeIconSize 0
+
+class LectorDeTarjeta {
+    +crearLector() : LectorDeTarjeta
+}
+
+class Pantalla {
+    +crearPantalla() : Pantalla
+    +visualizar(mensaje: string)
+}
+
+class Teclado {
+    +crearTeclado() : Teclado
+    +leerPIN() : unPIN
+    +leerOpcion() : unaOpcion
+    +leerCantidad() : cantidadDeDinero 
+    +leerNumeroDeCuenta() : numeroDeCuenta
+}
+
+class Impresora {
+    +crearImpresora() : Impresora
+    +imprimir(mensaje: string)
+}
+
+class GestorDeClientes {
+    +crearGestor() : GestorDeClientes
+    +crearCajero()
+    +iniciarSesion()
+}
+
+LectorDeTarjeta -right-* GestorDeClientes
+Pantalla --* GestorDeClientes
+Teclado --* GestorDeClientes
+Impresora --* GestorDeClientes
+@enduml
