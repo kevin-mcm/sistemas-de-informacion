@@ -1,0 +1,9 @@
+@startuml "Iniciar sesion"
+actor Usuario
+participant Pantalla
+participant Teclado
+boundary PaginaDeGitHub
+control ServicioDeUsuarios
+entity UsuarioDeGitHub
+
+@enduml

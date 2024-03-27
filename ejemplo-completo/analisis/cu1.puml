@@ -1,0 +1,19 @@
+@startuml "Iniciar sesion"
+actor Usuario
+boundary PaginaDeGitHub
+control ServicioDeUsuarios
+entity UsuarioDeGitHub
+
+Usuario -> PaginaDeGitHub : 1. Ingrese su nombre de usuario y contrasenia
+
+PaginaDeGitHub -> ServicioDeUsuarios : 2. Autentica(usuario, contrasenia)
+
+ServicioDeUsuarios -> UsuarioDeGitHub : 3. Valida(usuario, contrasenia)
+
+UsuarioDeGitHub -> ServicioDeUsuarios : 4. DatosValidos
+
+ServicioDeUsuarios -> PaginaDeGitHub : 5. VisualizaOpciones(intereses, equipos, repositoricos, actividades)
+
+PaginaDeGitHub -> Usuario : 6. SeleccionaUnaOpcion(intereses, equipos, repositoricos, actividades)
+
+@enduml

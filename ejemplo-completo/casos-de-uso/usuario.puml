@@ -1,0 +1,30 @@
+@startuml "Casos de Github"
+left to right direction
+actor "Usuario" as usuario
+rectangle GitHub {
+    usecase "Iniciar Sesion" as CU0
+    usecase "Crear cuenta" as CU1
+    usecase "Validar correo" as CU2
+    usecase "Eliminar cuenta" as CU3
+    usecase "Crear repositorio" as CU4
+    usecase "Crear repositorio publico" as CU5
+    usecase "Crear repositorio privado" as CU6
+    usecase "Editar repositorio" as CU7
+    usecase "Ver repositorio(s)" as CU8
+    usecase "Eliminar repositorio" as CU9
+    usecase "Archivar repositorio" as CU10
+    usecase "Cambiar visibilidad de un repositorio" as CU11
+}
+usuario --> CU0
+usuario --> CU1
+usuario --> CU3
+usuario --> CU4
+usuario --> CU7
+usuario --> CU8
+usuario --> CU9
+usuario --> CU10
+usuario --> CU11
+CU4 <.. CU5 : extends
+CU4 <.. CU6 : extends
+CU1 ..> CU2 : include
+@enduml
