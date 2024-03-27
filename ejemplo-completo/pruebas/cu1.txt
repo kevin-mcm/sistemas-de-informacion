@@ -1,0 +1,12 @@
+Caso de Prueba 1:  Caso de uso 1
+Descripción: El usuario “Pepito” ingresa su nombre de usuario y contraseña correctos
+Datos de entrada: 
+    - Nombre de usuario “pepito-dev”
+    - Contraseña “pepitodev-1234”
+    - El usuario y contraseña existen en el sistema
+Flujo (pasos):
+    - Pepito ingresa el usuario “pepito-dev” en el campo “Username or email address”
+    - Pepito ingresa la contraseña “pepitodev-1234” en el campo “Password”
+    - Pepito presiona el botón “Sign in”
+Resultados:
+    - El sistema muestra la pagina principal del usuario con sus intereses, equipos a los que pertenece y repositorios recientes
