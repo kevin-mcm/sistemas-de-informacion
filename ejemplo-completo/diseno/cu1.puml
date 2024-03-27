@@ -1,9 +1,39 @@
 @startuml "Iniciar sesion"
 actor Usuario
 participant Pantalla
+participant Raton
 participant Teclado
-boundary PaginaDeGitHub
 control ServicioDeUsuarios
 entity UsuarioDeGitHub
+
+ServicioDeUsuarios -> Pantalla : 1. Muestra(PaginaDeInicio)
+activate ServicioDeUsuarios
+activate Pantalla
+
+Usuario -> Raton : 2. presionaElBoton(Izquierdo) en la opcion "Sign in"
+activate Usuario
+activate Raton
+
+Raton -> ServicioDeUsuarios : 3. seleccionoLaOpcion(SignIn)
+deactivate Raton
+
+ServicioDeUsuarios -> Pantalla : 4. Muestra(FormularioDeInicioDeSesion)
+
+Usuario -> Teclado : 5. ingresa(nombreDeUsuario, contrasenia)
+activate Teclado
+
+Teclado -> ServicioDeUsuarios : 6. verificar(nombreDeUsuario, contrasenia) 
+deactivate Teclado
+
+ServicioDeUsuarios -> UsuarioDeGitHub : 7. verificar(nombreDeUsuario, contrasenia)
+activate UsuarioDeGitHub
+
+UsuarioDeGitHub -> ServicioDeUsuarios : 8. usuarioCorrecto
+deactivate UsuarioDeGitHub
+
+ServicioDeUsuarios -> Pantalla : 9. muestra(PaginaDePrincipalDelUsuario)
+deactivate Pantalla
+deactivate ServicioDeUsuarios
+deactivate Usuario
 
 @enduml
