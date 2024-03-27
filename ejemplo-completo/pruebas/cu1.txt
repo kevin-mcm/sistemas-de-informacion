@@ -5,8 +5,8 @@ Datos de entrada:
     - Contraseña “pepitodev-1234”
     - El usuario y contraseña existen en el sistema
 Flujo (pasos):
-    - Pepito ingresa el usuario “pepito-dev” en el campo “Username or email address”
-    - Pepito ingresa la contraseña “pepitodev-1234” en el campo “Password”
-    - Pepito presiona el botón “Sign in”
+    1. Pepito ingresa el usuario “pepito-dev” en el campo “Username or email address”
+    2. Pepito ingresa la contraseña “pepitodev-1234” en el campo “Password”
+    3. Pepito presiona el botón “Sign in”
 Resultados:
     - El sistema muestra la pagina principal del usuario con sus intereses, equipos a los que pertenece y repositorios recientes
