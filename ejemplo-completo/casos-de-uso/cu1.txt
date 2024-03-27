@@ -12,8 +12,14 @@ Escenario principal de éxito (flujo básico):
     1. El usuario presiona el botón “Sign in”
     2. El sistema muestra el usuario el formulario para iniciar sesión
     3. El usuario ingresa su nombre de usuario y contraseña
-    4. El sistema valida el nombre de usuario y contraseña
-    5. El sistema muestra la página principal del usuario
+    4. El usuario presiona el botón “Sign in”
+    5. El sistema valida el nombre de usuario y contraseña
+    6. El sistema muestra la página principal del usuario
 Extensiones (flujos alternativos):
     3. El usuario ingresa datos incorrectos
         3.1. El sistema muestra un mensaje indicando que el nombre de usuario o contraseña son incorrectos
+    4. El sistema pide que ingrese su código de doble factor de autenticación
+        4.1 El usuario ingresa un código correcto
+            4.1.1. El sistema valida el código
+        4.2 El usuario ingresa un código expirado o incorrecto
+            4.2.1 el sistema muestra un mensaje de código incorrecto
