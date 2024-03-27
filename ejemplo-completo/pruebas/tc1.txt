@@ -1,5 +1,5 @@
 Caso de Prueba 1:  Caso de uso 1
-Descripción: El usuario “Pepito” ingresa su nombre de usuario y contraseña correctos
+Descripción: El usuario “Pepito” ingresa su nombre de usuario "pepito-dev" y contraseña "pepitodev-1234" correctos
 Datos de entrada: 
     - Nombre de usuario “pepito-dev”
     - Contraseña “pepitodev-1234”

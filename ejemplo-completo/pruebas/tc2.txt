@@ -1,0 +1,12 @@
+Caso de Prueba 2: Caso de uso 1
+Descripción: El usuario “Pepito” ingresa su nombre de usuario "pepito" y contraseña "1234" incorrectos
+Datos de entrada: 
+    - El usuario incorrecto "pepito"
+    - La contraseña incorrecta "1234"
+    - El usuario y contraseña no existen en el sistema
+Flujo (pasos):
+    1. Pepito ingresa el usuario “pepito" incorrecto en el campo “Username or email address”
+    2. Pepito ingresa la contraseña “1234” incorrecta en el campo “Password”
+    3. Pepito presiona el botón “Sign in”
+Resultados:
+    - El sistema muestra un mensaje que dice "Nombre de usuario o contraseña incorrectos"
